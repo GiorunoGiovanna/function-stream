@@ -13,15 +13,14 @@ export const asyncRouterMap = [
         path: '/function',
         name: 'function',
         meta: { title: 'menu.function', icon: 'table' },
-        component: () => import('@/views/function/index'),
+        component: () => import('@/views/function/index')
       },
-	  {
-        path: '/images',
-        name: 'images',
-        component: RouteView,
-        meta: { title: 'Images', icon: 'table' },
-        component: () => import('@/views/images/index'),
-	  }
+      {
+          path: '/images',
+          name: 'images',
+          meta: { title: 'Images', icon: 'table' },
+          component: () => import('@/views/images/index')
+      }
     ]
   },
   {

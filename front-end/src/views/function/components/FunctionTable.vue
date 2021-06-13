@@ -48,7 +48,8 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => []
+      // eslint-disable-next-line vue/require-valid-default-prop
+      default: []
     },
     onSelFunction: {
       type: Function,
@@ -73,7 +74,8 @@ export default {
         okType: 'danger',
         async onOk () {
           try {
-            await deleteFunc(name)
+            // eslint-disable-next-line no-unused-vars
+            const res = await deleteFunc(name)
             _this.$notification.success({ message: `"${name}" function deleted successfully` })
           } catch (error) {
             _this.$notification.error({ message: `"${name}" funciton deletion failed` })
